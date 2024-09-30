@@ -12,7 +12,8 @@ class LoggingMiddleware:
 
     def __call__(self, request):
         ip_address = self.get_client_ip(request)
-        user = request.user.username if request.user.is_authenticated else "Anonymous"
+
+        user = request.user.email if request.user.is_authenticated else "Anonymous"
         request_time = datetime.now()
 
         request_logger.info(
@@ -38,4 +39,9 @@ class LoggingMiddleware:
         if not os.path.exists(log_dir):
             os.makedirs(log_dir)
 
-
+        if not request_logger.handlers:
+            file_handler = logging.FileHandler(log_file)
+            formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+            file_handler.setFormatter(formatter)
+            request_logger.setLevel(logging.INFO)
+            request_logger.addHandler(file_handler)

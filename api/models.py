@@ -1,53 +1,51 @@
+from django.contrib.auth.models import (
+    AbstractBaseUser,
+    BaseUserManager,
+    PermissionsMixin,
+)
 from django.db import models
 
 
-class Doctor(models.Model):
-    name = models.CharField(max_length=255)
-    specialization = models.CharField(max_length=255)
-    contact_number = models.CharField(max_length=15)
+class CustomUserManager(BaseUserManager):
+    def create_user(self, email, password=None, **extra_fields):
+        if not email:
+            raise ValueError("The Email field must be set")
+        email = self.normalize_email(email)
+        user = self.model(email=email, **extra_fields)
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+
+    def create_superuser(self, email, password=None, **extra_fields):
+        extra_fields.setdefault("is_staff", True)
+        extra_fields.setdefault("is_superuser", True)
+
+        if extra_fields.get("role") is None:
+            extra_fields["role"] = "gold"
+
+        return self.create_user(email, password, **extra_fields)
+
+
+class CustomUser(AbstractBaseUser, PermissionsMixin):
+    username = None  # Remove the username field
+    email = models.EmailField(unique=True)
+    first_name = models.CharField(max_length=30, blank=True)
+    last_name = models.CharField(max_length=30, blank=True)
+    is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
+
+    ROLE_CHOICES = [
+        ("gold", "Gold"),
+        ("silver", "Silver"),
+        ("bronze", "Bronze"),
+        ("default", "Default"),
+    ]
+    role = models.CharField(max_length=10, choices=ROLE_CHOICES, default="Default")
+
+    USERNAME_FIELD = "email"
+    REQUIRED_FIELDS = []
+
+    objects = CustomUserManager()
 
     def __str__(self):
-        return f"Dr. {self.name} - {self.specialization}"
-
-
-class Nurse(models.Model):
-    name = models.CharField(max_length=255)
-    contact_number = models.CharField(max_length=15)
-
-    def __str__(self):
-        return f"Nurse {self.name}"
-
-
-class Patient(models.Model):
-    name = models.CharField(max_length=255)
-    age = models.IntegerField()
-    doctor = models.ManyToManyField(Doctor, related_name="patients")
-    nurse = models.ForeignKey(Nurse, on_delete=models.CASCADE, related_name="patients")
-    date_admitted = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f"Patient {self.name} ({self.age} years old)"
-
-
-class Hospital(models.Model):
-    name = models.CharField(max_length=255)
-    address = models.TextField()
-    patient = models.ForeignKey(
-        Patient, on_delete=models.CASCADE, related_name="hospitals"
-    )
-    doctor = models.ManyToManyField(Doctor, related_name="hospitals")
-    nurse = models.ForeignKey(Nurse, on_delete=models.CASCADE, related_name="hospitals")
-
-    def __str__(self):
-        return f"Hospital: {self.name}"
-
-
-class MedicalRecord(models.Model):
-    patient = models.ForeignKey(
-        Patient, on_delete=models.CASCADE, related_name="medical_records"
-    )
-    diagnoses = models.TextField()
-    prescription = models.TextField()
-
-    def __str__(self):
-        return f"Medical Record for {self.patient.name}"
+        return self.email

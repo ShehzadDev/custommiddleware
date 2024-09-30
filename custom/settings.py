@@ -81,15 +81,19 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "custom.middlewares.logging.LoggingMiddleware",
-    "custom.middlewares.ratelimit.RateLimitingMiddleware",
+    # "custom.middlewares.ratelimit.RateLimitMiddleware",
+    "custom.middlewares.role_based_ratelimit.RateLimitMiddleware",
 ]
 
 ROOT_URLCONF = "custom.urls"
 
+
+AUTH_USER_MODEL = "api.CustomUser"
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, "templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
