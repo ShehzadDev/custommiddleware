@@ -1,0 +1,21 @@
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-09-30 10:47:54.477310
+"GET / HTTP/1.1" 200 40
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-09-30 10:48:04.548960
+"GET /admin/ HTTP/1.1" 302 0
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-09-30 10:48:04.557398
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4160
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-09-30 10:48:08.745408
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4160
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-09-30 10:48:11.371830
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4160
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-09-30 10:48:12.462020
+Forbidden (Permission denied): /admin/login/
+Traceback (most recent call last):
+  File "/home/linked/django-projects/custom/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/linked/django-projects/custom/custom/middlewares/ratelimit.py", line 17, in __call__
+    raise PermissionDenied("Too many requests. Please try again later.")
+django.core.exceptions.PermissionDenied: Too many requests. Please try again later.
+"GET /admin/login/?next=/admin/ HTTP/1.1" 403 135
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-09-30 10:49:12.600333
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4160

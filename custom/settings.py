@@ -15,6 +15,7 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -29,6 +30,11 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+LOG_DIR = os.path.join(BASE_DIR, "logs")
+if not os.path.exists(LOG_DIR):
+    os.makedirs(LOG_DIR)
+
+
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
@@ -36,7 +42,7 @@ LOGGING = {
         "file": {
             "level": "INFO",
             "class": "logging.FileHandler",
-            "filename": os.path.join(BASE_DIR, "logs", "requests.log"),
+            "filename": os.path.join(LOG_DIR, "requests.log"),
         },
     },
     "loggers": {
@@ -74,6 +80,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "custom.middlewares.logging.LoggingMiddleware",
+    "custom.middlewares.ratelimit.RateLimitingMiddleware",
 ]
 
 ROOT_URLCONF = "custom.urls"
