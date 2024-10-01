@@ -6,6 +6,7 @@ from django.contrib.auth import get_user_model
 from django.contrib import messages
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 
 User = get_user_model()
 
@@ -79,3 +80,8 @@ class ProtectedView(View):
                 "message": f"Hello, {request.user.email}. This is a protected view. Your role is {request.user.role}."
             }
         )
+
+
+class HomeView(View):
+    def get(self, request):
+        return HttpResponse("Welcome to the Home Page")

@@ -102,3 +102,50 @@ IP: 127.0.0.1, User: logout@django.com, Request Time: 2024-10-01 12:38:13.973670
 IP: 127.0.0.1, User: protected@django.com, Request Time: 2024-10-01 12:38:14.153981
 IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:38:14.156461
 IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:38:14.158880
+Watching for file changes with StatReloader
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:42:31.577734
+Not Found: /
+"GET / HTTP/1.1" 404 3185
+/home/linked/django-projects/custom/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/urls.py changed, reloading.
+Watching for file changes with StatReloader
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:44:47.204687
+"GET / HTTP/1.1" 200 24
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:44:48.951703
+Too Many Requests: /
+"GET / HTTP/1.1" 429 53
