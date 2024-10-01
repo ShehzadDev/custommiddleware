@@ -50,3 +50,55 @@ IP: 127.0.0.1, User: logout@django.com, Request Time: 2024-10-01 12:05:49.138626
 IP: 127.0.0.1, User: protected@django.com, Request Time: 2024-10-01 12:05:49.315336
 IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:05:49.317780
 IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:05:49.320095
+IP: 127.0.0.1, User: shehz@gmail.com, Request Time: 2024-10-01 12:18:16.799842
+Forbidden (CSRF token from POST incorrect.): /login/
+"POST /login/ HTTP/1.1" 403 2503
+IP: 127.0.0.1, User: shehz@gmail.com, Request Time: 2024-10-01 12:18:22.810090
+Not Found: /
+"GET / HTTP/1.1" 404 3185
+IP: 127.0.0.1, User: shehz@gmail.com, Request Time: 2024-10-01 12:18:29.344819
+"GET /protected/ HTTP/1.1" 200 83
+/home/linked/django-projects/custom/custom/middlewares/logging.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/custom/middlewares/logging.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/custom/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/custom/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/custom/settings.py changed, reloading.
+Watching for file changes with StatReloader
+IP: 127.0.0.1, User: shehz@gmail.com, Request Time: 2024-10-01 12:34:08.996566
+Not Found: /
+"GET / HTTP/1.1" 404 3185
+IP: 127.0.0.1, User: shehz@gmail.com, Request Time: 2024-10-01 12:34:16.957737
+"GET /login/ HTTP/1.1" 302 0
+IP: 127.0.0.1, User: shehz@gmail.com, Request Time: 2024-10-01 12:34:16.981955
+"GET /protected/ HTTP/1.1" 200 83
+IP: 127.0.0.1, User: shehz@gmail.com, Request Time: 2024-10-01 12:34:29.200505
+"GET /login/ HTTP/1.1" 302 0
+IP: 127.0.0.1, User: shehz@gmail.com, Request Time: 2024-10-01 12:34:29.223245
+"GET /protected/ HTTP/1.1" 200 83
+IP: 127.0.0.1, User: shehz@gmail.com, Request Time: 2024-10-01 12:34:37.443775
+"GET /logout/ HTTP/1.1" 200 32
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:34:40.025480
+Bad Request: /logout/
+"GET /logout/ HTTP/1.1" 400 34
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:34:41.306902
+Too Many Requests: /protected/
+"GET /protected/ HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:34:47.442132
+Too Many Requests: /login/
+"GET /login/ HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:34:59.814523
+Too Many Requests: /login/
+"GET /login/ HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:38:12.768833
+IP: 127.0.0.1, User: test@django.com, Request Time: 2024-10-01 12:38:12.939960
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:38:13.292091
+Bad Request: /login/
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:38:13.628287
+IP: 127.0.0.1, User: logout@django.com, Request Time: 2024-10-01 12:38:13.973670
+IP: 127.0.0.1, User: protected@django.com, Request Time: 2024-10-01 12:38:14.153981
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:38:14.156461
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:38:14.158880

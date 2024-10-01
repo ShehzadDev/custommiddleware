@@ -80,9 +80,9 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "custom.middlewares.logging.LoggingMiddleware",
-    # "custom.middlewares.ratelimit.RateLimitMiddleware",
-    "custom.middlewares.role_based_ratelimit.RateLimitMiddleware",
+    "api.middlewares.logging.LoggingMiddleware",
+    # "api.middlewares.ratelimit.RateLimitMiddleware",
+    "api.middlewares.role_based_ratelimit.RateLimitMiddleware",
 ]
 
 ROOT_URLCONF = "custom.urls"
