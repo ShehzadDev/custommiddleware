@@ -1,6 +1,5 @@
 env/
 log/
-README.md
 .coverage
 setup.cfg
 .gitignore

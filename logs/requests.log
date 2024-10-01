@@ -32,3 +32,21 @@ Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 /home/linked/django-projects/custom/api/migrations/__init__.py changed, reloading.
 Watching for file changes with StatReloader
+IP: 127.0.0.1, User: shehz@gmail.com, Request Time: 2024-10-01 12:05:08.261390
+Not Found: /
+"GET / HTTP/1.1" 404 3185
+IP: 127.0.0.1, User: shehz@gmail.com, Request Time: 2024-10-01 12:05:12.827404
+"GET /login/ HTTP/1.1" 302 0
+IP: 127.0.0.1, User: shehz@gmail.com, Request Time: 2024-10-01 12:05:12.852805
+"GET /protected/ HTTP/1.1" 200 83
+IP: 127.0.0.1, User: shehz@gmail.com, Request Time: 2024-10-01 12:05:21.482310
+"GET /protected/ HTTP/1.1" 200 83
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:05:47.900281
+IP: 127.0.0.1, User: test@django.com, Request Time: 2024-10-01 12:05:48.077031
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:05:48.444855
+Bad Request: /login/
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:05:48.787253
+IP: 127.0.0.1, User: logout@django.com, Request Time: 2024-10-01 12:05:49.138626
+IP: 127.0.0.1, User: protected@django.com, Request Time: 2024-10-01 12:05:49.315336
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:05:49.317780
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:05:49.320095
