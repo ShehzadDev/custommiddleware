@@ -4,6 +4,8 @@ from django.contrib.auth.models import (
     PermissionsMixin,
 )
 from django.db import models
+from django.utils import timezone
+from django.conf import settings
 
 
 class CustomUserManager(BaseUserManager):
@@ -27,20 +29,21 @@ class CustomUserManager(BaseUserManager):
 
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
-    username = None  # Remove the username field
+    username = None
     email = models.EmailField(unique=True)
     first_name = models.CharField(max_length=30, blank=True)
     last_name = models.CharField(max_length=30, blank=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 
-    ROLE_CHOICES = [
-        ("gold", "Gold"),
-        ("silver", "Silver"),
-        ("bronze", "Bronze"),
-        ("default", "Default"),
-    ]
-    role = models.CharField(max_length=10, choices=ROLE_CHOICES, default="Default")
+    date_joined = models.DateTimeField(default=timezone.now)
+    last_login = models.DateTimeField(blank=True, null=True)
+
+    role = models.CharField(
+        max_length=20,
+        choices=settings.USER_ROLE_CHOICES,
+        default="default",
+    )
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []

@@ -20,9 +20,6 @@ class RegisterView(View):
         password = request.POST.get("password")
         role = request.POST.get("role", "default")
 
-        if role == "default":
-            role = "default"
-
         if not email or not password:
             messages.error(request, "Email and password are required.")
             return redirect("register")

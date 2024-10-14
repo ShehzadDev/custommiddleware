@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+from api.enums import UserRole
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -82,7 +83,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "api.middlewares.logging.LoggingMiddleware",
     # "api.middlewares.ratelimit.RateLimitMiddleware",
-    "api.middlewares.role_based_ratelimit.RateLimitMiddleware",
+    "api.middlewares.logging.RateLimitMiddleware",
 ]
 
 ROOT_URLCONF = "custom.urls"
@@ -160,3 +161,18 @@ DATABASES = {
         "PORT": "5432",
     }
 }
+
+
+ROLE_REQUEST_LIMITS = {
+    UserRole.GOLD: 10,
+    UserRole.SILVER: 5,
+    UserRole.BRONZE: 2,
+    UserRole.UNAUTHENTICATED: 1,
+}
+
+USER_ROLE_CHOICES = [
+    ("gold", "Gold"),
+    ("silver", "Silver"),
+    ("bronze", "Bronze"),
+    ("default", "Default"),
+]

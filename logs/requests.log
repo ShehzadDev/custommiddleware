@@ -149,3 +149,261 @@ IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:44:47.204687
 IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:44:48.951703
 Too Many Requests: /
 "GET / HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:46:09.369322
+"GET /protected/ HTTP/1.1" 302 0
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:46:09.384515
+Too Many Requests: /accounts/login/
+"GET /accounts/login/?next=/protected/ HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:47:58.896790
+"GET /login/ HTTP/1.1" 200 1593
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:48:13.463569
+Too Many Requests: /login/
+"POST /login/ HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-01 12:49:58.826523
+"POST /login/ HTTP/1.1" 200 31
+IP: 127.0.0.1, User: shehz@gmail.com, Request Time: 2024-10-01 12:50:01.332766
+"GET /login/ HTTP/1.1" 302 0
+IP: 127.0.0.1, User: shehz@gmail.com, Request Time: 2024-10-01 12:50:01.356566
+"GET /protected/ HTTP/1.1" 200 83
+Watching for file changes with StatReloader
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 08:48:14.442556
+"GET / HTTP/1.1" 200 24
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 08:48:30.334111
+Too Many Requests: /login/
+"GET /login/ HTTP/1.1" 429 53
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/middlewares/logging.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/middlewares/logging.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/middlewares/logging.py changed, reloading.
+Watching for file changes with StatReloader
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 08:55:21.672152
+"GET / HTTP/1.1" 200 24
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 08:55:25.477505
+Too Many Requests: /
+"GET / HTTP/1.1" 429 53
+/home/linked/django-projects/custom/api/middlewares/logging.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/middlewares/logging.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/middlewares/logging.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/middlewares/role_based_ratelimit.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/middlewares/logging.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/custom/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/custom/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/custom/settings.py changed, reloading.
+Watching for file changes with StatReloader
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 08:58:56.525113
+"GET / HTTP/1.1" 200 24
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 08:58:57.381493
+Too Many Requests: /
+"GET / HTTP/1.1" 429 53
+/home/linked/django-projects/custom/api/middlewares/logging.py changed, reloading.
+Watching for file changes with StatReloader
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:01:03.578551
+"GET / HTTP/1.1" 200 24
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:01:04.592313
+Too Many Requests: /
+"GET / HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:03:55.084165
+"GET / HTTP/1.1" 200 24
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:03:55.122920
+Too Many Requests: /favicon.ico
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:04:03.332127
+Too Many Requests: /
+"GET / HTTP/1.1" 429 53
+/home/linked/django-projects/custom/custom/settings.py changed, reloading.
+Watching for file changes with StatReloader
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:10:27.561332
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/linked/django-projects/custom/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/linked/django-projects/custom/api/middlewares/logging.py", line 59, in __call__
+    if self.user_request_counts[user_id]["count"] > request_limit:
+TypeError: '>' not supported between instances of 'int' and 'NoneType'
+"GET / HTTP/1.1" 500 63461
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:11:13.531701
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/linked/django-projects/custom/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/linked/django-projects/custom/api/middlewares/logging.py", line 59, in __call__
+    if self.user_request_counts[user_id]["count"] > request_limit:
+TypeError: '>' not supported between instances of 'int' and 'NoneType'
+"GET / HTTP/1.1" 500 63460
+/home/linked/django-projects/custom/api/middlewares/logging.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/middlewares/logging.py changed, reloading.
+Watching for file changes with StatReloader
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:12:14.728555
+"GET / HTTP/1.1" 200 24
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:12:16.283096
+Too Many Requests: /
+"GET / HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:12:17.240737
+Too Many Requests: /
+"GET / HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:12:17.659409
+Too Many Requests: /
+"GET / HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:12:17.837062
+Too Many Requests: /
+"GET / HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:12:18.015834
+Too Many Requests: /
+"GET / HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:12:18.192278
+Too Many Requests: /
+"GET / HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:12:18.365576
+Too Many Requests: /
+"GET / HTTP/1.1" 429 53
+/home/linked/django-projects/custom/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/custom/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/custom/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/custom/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/custom/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/enums.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/enums.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/enums.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/custom/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/custom/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/models.py changed, reloading.
+Watching for file changes with StatReloader
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:26:51.770707
+"GET / HTTP/1.1" 200 24
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:26:58.396866
+Too Many Requests: /protected/
+"GET /protected/ HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:26:58.420787
+Too Many Requests: /favicon.ico
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:30:15.650273
+"GET /protected/ HTTP/1.1" 302 0
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:30:15.665424
+Too Many Requests: /accounts/login/
+"GET /accounts/login/?next=/protected/ HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:30:16.904936
+Too Many Requests: /accounts/login/
+"GET /accounts/login/?next=/protected/ HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:30:17.158199
+Too Many Requests: /accounts/login/
+"GET /accounts/login/?next=/protected/ HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:30:17.342436
+Too Many Requests: /accounts/login/
+"GET /accounts/login/?next=/protected/ HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:30:17.524795
+Too Many Requests: /accounts/login/
+"GET /accounts/login/?next=/protected/ HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:30:17.701585
+Too Many Requests: /accounts/login/
+"GET /accounts/login/?next=/protected/ HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:30:17.882027
+Too Many Requests: /accounts/login/
+"GET /accounts/login/?next=/protected/ HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:30:18.067700
+Too Many Requests: /accounts/login/
+"GET /accounts/login/?next=/protected/ HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:30:18.436325
+Too Many Requests: /accounts/login/
+"GET /accounts/login/?next=/protected/ HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:30:18.624910
+Too Many Requests: /accounts/login/
+"GET /accounts/login/?next=/protected/ HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:30:18.825246
+Too Many Requests: /accounts/login/
+"GET /accounts/login/?next=/protected/ HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:30:18.987647
+Too Many Requests: /accounts/login/
+"GET /accounts/login/?next=/protected/ HTTP/1.1" 429 53
+/home/linked/django-projects/custom/api/enums.py changed, reloading.
+Watching for file changes with StatReloader
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:31:42.190556
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/protected/ HTTP/1.1" 404 3511
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:31:48.813535
+Too Many Requests: /
+"GET / HTTP/1.1" 429 53
+/home/linked/django-projects/custom/custom/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/custom/settings.py changed, reloading.
+Watching for file changes with StatReloader
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:32:06.575571
+"GET / HTTP/1.1" 200 24
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:32:08.497539
+Too Many Requests: /
+"GET / HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:32:09.180611
+Too Many Requests: /
+"GET / HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:33:48.678014
+"GET / HTTP/1.1" 200 24
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:33:52.115777
+Too Many Requests: /
+"GET / HTTP/1.1" 429 53
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:41:24.349975
+"GET / HTTP/1.1" 200 24
+/home/linked/django-projects/custom/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:46:29.021730
+"GET / HTTP/1.1" 200 24
+IP: 127.0.0.1, User: Anonymous, Request Time: 2024-10-14 09:46:29.802789
+Too Many Requests: /
+"GET / HTTP/1.1" 429 53
+/home/linked/django-projects/custom/api/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/linked/django-projects/custom/custom/settings.py changed, reloading.

@@ -1,8 +1,7 @@
 from django.urls import reverse
 from django.test import TestCase, RequestFactory
 from django.contrib.auth import get_user_model
-from api.middlewares.logging import LoggingMiddleware
-from api.middlewares.role_based_ratelimit import RateLimitMiddleware
+from api.middlewares.logging import LoggingMiddleware, RateLimitMiddleware
 from django.contrib.auth.models import AnonymousUser
 
 User = get_user_model()
